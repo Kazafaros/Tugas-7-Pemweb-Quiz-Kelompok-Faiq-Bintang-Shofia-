@@ -1,0 +1,203 @@
+/* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    
+    /* Header */
+    .header {
+        background-color: #1da1f2;
+        color: white;
+        padding: 20px 0;
+    }
+    
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav a {
+        margin-left: 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav a:hover {
+        color: #ff7f50;
+    }
+    
+  /* Hero Section */
+  .hero {
+    background-color: #1da1f2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #e76431;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .feature-item {
+    margin-bottom: 30px;
+  }
+  
+  .feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-item p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Join Section */
+  .join {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .join h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .join-form {
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .join-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .join-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .join-form button:hover {
+    background-color: #e76431;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1da1f2;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    font-size: 16px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .hero-description {
+      font-size: 18px;
+    }
+  
+    .cta-button {
+      font-size: 16px;
+    }
+  }
+  

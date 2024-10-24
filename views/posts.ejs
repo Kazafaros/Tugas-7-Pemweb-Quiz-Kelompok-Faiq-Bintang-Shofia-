@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Posts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .navbar {
+            background-color: #4267B2;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+        h1 {
+            color: #4267B2;
+            font-weight: bold;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .post {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .post .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .post .content {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .post .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .post .action-buttons a {
+            margin-right: 5px;
+            padding: 10px 20px;
+            background-color: #4267B2;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .post .action-buttons a:hover {
+            background-color: #365899;
+        }
+        .create-post-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4267B2;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .create-post-button:hover {
+            background-color: #365899;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/posts">Profil</a>
+        <a href="/auth/logout">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Home</h1>
+        <a href="/posts/create" class="create-post-button">Create New Post</a>
+        <% posts.forEach(post => { %>
+            <div class="post">
+                <div class="title"><%= post.title %></div>
+                <div class="content"><%= post.content %></div>
+                <div class="action-buttons">
+                    <a href="/posts/edit/<%= post.id %>">Edit</a>
+                    <a href="/posts/delete/<%= post.id %>" onclick="confirmDelete('<%= post.id %>')">Delete</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <div class="footer" style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: #4267B2; color: white; padding: 10px;">
+        Copyright &copy; 2022 Your Name
+    </div>
+</body>
+<script>
+    function confirmDelete(id) {
+        let confirmDelete = confirm("Are you sure to delete this post?");
+        if (confirmDelete) {
+            alert("Post has been deleted");
+            window.location.href = `/posts/delete/${id}`;
+        } else {
+            alert("Delete post cancelled");
+        }
+    }
+</script>
+</html>
+
+

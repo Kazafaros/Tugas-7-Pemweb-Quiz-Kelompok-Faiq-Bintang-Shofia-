@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+    <style>
+        body {
+            font-family: 'Kosugi', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        h1 {
+            color: #333;
+            font-weight: bold;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #6495ED;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4a74c4;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6495ED;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a New Post</h1>
+    <form action="/posts/create" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" required>
+        <br>
+        <label>Content:</label>
+        <textarea name="content" required></textarea>
+        <br>
+        <button type="submit">Create Post</button>
+    </form>
+    <a href="/posts">Back to Posts</a>
+</body>
+</html>
+
